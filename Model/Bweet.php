@@ -2,7 +2,7 @@
 
 class Bweet extends AppModel {
     public $belongsTo = 'User';
-    
+
     public $validate = array(
       'description' => array(
           'required' => array(
@@ -11,4 +11,6 @@ class Bweet extends AppModel {
           )
       )
     );
+
+    var $order = "Bweet.created desc";
 }

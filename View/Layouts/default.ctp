@@ -57,30 +57,6 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		</div>
 	</div>
 	<?php echo $this->element('sql_dump'); ?>
-	<script type="text/javascript">
-	$(function() {
-		setTimeout(function() {
-			$('#flashMessage').fadeOut('slow');
-		}, 2000);
-	});
-  </script>
-	<script type="text/javascript">
-	$("#more-show").click(function(){
-	        var data = new Object();
-	        data = {"title":"hogehgoe"};
-	   $.ajax({
-	       url:"check.php",
-	       data:data,
-	       type:"post",
-	       dataType:"json",
-	       success:function(data){
-            alert(data);
-            alert("データが届いています。\nコンソールを開きながら再度確認して下さい。")
-            console.log(data);
-         }
-     });
-	});
-  </script>
 
 </body>
 </html>

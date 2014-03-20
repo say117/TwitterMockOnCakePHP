@@ -5,9 +5,15 @@ if ($user) {
   echo $this->Html->image('/icons/'. $user['username'] .'.jpg', 
     array('alt' =>'icon', 'width' => 64, 'height' => 64));
   echo "<h3>" . $user['username'] . "</h3>";
-  echo $this->Html->link('Sign out', '/users/logout') . "<br>";
   echo $this->Html->link('Edit', '/users/edit') . "<br>";
-  echo $this->Html->link('New bweet', '/bweets/add') . "<br>";
+  echo $this->Html->link('Sign out', '/users/logout') . "<br>";
+?>
+<fieldset>
+  <legend>Bweet</legend>
+  <textarea id="bweet-description"></textarea><br>
+  <button type="submit" id="bweet-button">Bweet</button>
+</fieldset>
+<?php
 } else {
   echo $this->Html->link('Sign up', '/users/add') . "<br>";
   echo $this->Html->link('Sign in', '/users/login') . "<br>";
@@ -16,6 +22,7 @@ if ($user) {
 </div>
 <div id="main">
 <h2>Bweets List</h2>
+<div id="bweets">
 <?php foreach ($bweets as $bweet) : ?>
   <fieldset>
     <legend>
@@ -31,3 +38,49 @@ if ($user) {
   <hr>
 <?php endforeach; ?>
 </div>
+<br>
+<input type="button" value="More Show 10 Bweets" id="more-show"/>
+</div>
+
+
+  <script type="text/javascript">
+  $(function() {
+    setTimeout(function() {
+      $('#flashMessage').fadeOut('slow');
+    }, 2000);
+  });
+  </script>
+  <script type="text/javascript">
+  $("#more-show").click(function(){
+     $.ajax({
+         url:"bweets/moreShow",
+         type:"get",
+         dataType:"html",
+         success:function(data, status, xhr){
+           data == "" ? alert("Bweetは全て表示されました。") : $("#bweets").append(data);
+         },
+         error: function(data, status, xhr) {
+          alert('error!');
+         }
+     });
+  });
+  </script>
+  <script type="text/javascript">
+  $("#bweet-button").click(function(){
+     var data = {"description": $("#bweet-description").val()};
+     $.ajax({
+         url:"bweets/add",
+         data: data,
+         type:"post",
+         dataType:"html",
+         success:function(data, status, xhr) {
+           $("#bweets").prepend(data);
+           $("#bweet-description").val("");
+           $("#bweet-description").focus();
+         },
+         error: function(data, status, xhr) {
+          alert('error!');
+         }
+     });
+  });
+  </script>
