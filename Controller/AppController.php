@@ -31,4 +31,14 @@ App::uses('Controller', 'Controller');
  * @link		http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
 class AppController extends Controller {
+    public function beforeFilter() {
+      $this->set('user', $this->Auth->user());
+    }
+    public $components = array(
+        'Session',
+        'Auth' => array(
+            'loginRedirect' => array('controller' => 'bweets', 'action' => 'index'),
+            'logoutRedirect' => array('controller' => 'bweets', 'action' => 'index')
+        )
+    );
 }

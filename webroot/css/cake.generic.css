@@ -48,7 +48,7 @@ h1, h2, h3, h4 {
 h1 {
 	background:#fff;
 	color: #003d4c;
-	font-size: 100%;
+	font-size: 250%;
 }
 h2 {
 	background:#fff;
@@ -74,6 +74,8 @@ p {
 
 /** Layout **/
 #container {
+	width: 1000px;
+	margin: 0 auto;
 	text-align: left;
 }
 
@@ -103,6 +105,13 @@ p {
 	color: #333;
 	padding: 10px 20px 40px 20px;
 	overflow: auto;
+}
+#side {
+	float: left;
+	width: 250px;
+}
+#main {
+	margin-left: 250px;
 }
 #footer {
 	clear: both;

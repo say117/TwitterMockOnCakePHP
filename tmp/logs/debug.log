@@ -1,0 +1,758 @@
+2014-03-20 18:58:04 Debug: Bweet Object
+(
+    [belongsTo] => Array
+        (
+            [User] => Array
+                (
+                    [className] => User
+                    [foreignKey] => user_id
+                    [conditions] => 
+                    [fields] => 
+                    [order] => 
+                    [counterCache] => 
+                )
+
+        )
+
+    [validate] => Array
+        (
+            [description] => Array
+                (
+                    [required] => Array
+                        (
+                            [rule] => Array
+                                (
+                                    [0] => notEmpty
+                                )
+
+                            [message] => A description is required
+                        )
+
+                )
+
+        )
+
+    [useDbConfig] => default
+    [useTable] => bweets
+    [id] => 
+    [data] => Array
+        (
+        )
+
+    [schemaName] => database_cake
+    [table] => bweets
+    [primaryKey] => id
+    [_schema:protected] => Array
+        (
+            [id] => Array
+                (
+                    [type] => integer
+                    [null] => 
+                    [default] => 
+                    [length] => 11
+                    [key] => primary
+                )
+
+            [created] => Array
+                (
+                    [type] => datetime
+                    [null] => 
+                    [default] => 
+                    [length] => 
+                )
+
+            [description] => Array
+                (
+                    [type] => text
+                    [null] => 
+                    [default] => 
+                    [length] => 
+                    [collate] => utf8_general_ci
+                    [charset] => utf8
+                )
+
+            [user_id] => Array
+                (
+                    [type] => integer
+                    [null] => 1
+                    [default] => 
+                    [length] => 11
+                )
+
+        )
+
+    [validationErrors] => Array
+        (
+        )
+
+    [validationDomain] => 
+    [tablePrefix] => 
+    [plugin] => 
+    [name] => Bweet
+    [alias] => Bweet
+    [tableToModel] => Array
+        (
+            [bweets] => Bweet
+        )
+
+    [cacheQueries] => 
+    [hasOne] => Array
+        (
+        )
+
+    [hasMany] => Array
+        (
+        )
+
+    [hasAndBelongsToMany] => Array
+        (
+        )
+
+    [actsAs] => 
+    [Behaviors] => BehaviorCollection Object
+        (
+            [modelName] => Bweet
+            [_methods:protected] => Array
+                (
+                )
+
+            [_mappedMethods:protected] => Array
+                (
+                )
+
+            [_enabled:protected] => Array
+                (
+                )
+
+            [_loaded:protected] => Array
+                (
+                )
+
+            [defaultPriority] => 10
+        )
+
+    [whitelist] => Array
+        (
+        )
+
+    [cacheSources] => 1
+    [findQueryType] => 
+    [recursive] => 1
+    [order] => 
+    [virtualFields] => Array
+        (
+        )
+
+    [_associationKeys:protected] => Array
+        (
+            [belongsTo] => Array
+                (
+                    [0] => className
+                    [1] => foreignKey
+                    [2] => conditions
+                    [3] => fields
+                    [4] => order
+                    [5] => counterCache
+                )
+
+            [hasOne] => Array
+                (
+                    [0] => className
+                    [1] => foreignKey
+                    [2] => conditions
+                    [3] => fields
+                    [4] => order
+                    [5] => dependent
+                )
+
+            [hasMany] => Array
+                (
+                    [0] => className
+                    [1] => foreignKey
+                    [2] => conditions
+                    [3] => fields
+                    [4] => order
+                    [5] => limit
+                    [6] => offset
+                    [7] => dependent
+                    [8] => exclusive
+                    [9] => finderQuery
+                    [10] => counterQuery
+                )
+
+            [hasAndBelongsToMany] => Array
+                (
+                    [0] => className
+                    [1] => joinTable
+                    [2] => with
+                    [3] => foreignKey
+                    [4] => associationForeignKey
+                    [5] => conditions
+                    [6] => fields
+                    [7] => order
+                    [8] => limit
+                    [9] => offset
+                    [10] => unique
+                    [11] => finderQuery
+                )
+
+        )
+
+    [_associations:protected] => Array
+        (
+            [0] => belongsTo
+            [1] => hasOne
+            [2] => hasMany
+            [3] => hasAndBelongsToMany
+        )
+
+    [__backAssociation] => Array
+        (
+        )
+
+    [__backInnerAssociation] => Array
+        (
+        )
+
+    [__backOriginalAssociation] => Array
+        (
+        )
+
+    [__backContainableAssociation] => Array
+        (
+        )
+
+    [_insertID:protected] => 
+    [_sourceConfigured:protected] => 1
+    [findMethods] => Array
+        (
+            [all] => 1
+            [first] => 1
+            [count] => 1
+            [neighbors] => 1
+            [list] => 1
+            [threaded] => 1
+        )
+
+    [_eventManager:protected] => 
+    [_validator:protected] => 
+    [user_id] => 3
+)
+
+2014-03-20 18:58:48 Debug: Bweet Object
+(
+    [belongsTo] => Array
+        (
+            [User] => Array
+                (
+                    [className] => User
+                    [foreignKey] => user_id
+                    [conditions] => 
+                    [fields] => 
+                    [order] => 
+                    [counterCache] => 
+                )
+
+        )
+
+    [validate] => Array
+        (
+            [description] => Array
+                (
+                    [required] => Array
+                        (
+                            [rule] => Array
+                                (
+                                    [0] => notEmpty
+                                )
+
+                            [message] => A description is required
+                        )
+
+                )
+
+        )
+
+    [useDbConfig] => default
+    [useTable] => bweets
+    [id] => 
+    [data] => Array
+        (
+        )
+
+    [schemaName] => database_cake
+    [table] => bweets
+    [primaryKey] => id
+    [_schema:protected] => Array
+        (
+            [id] => Array
+                (
+                    [type] => integer
+                    [null] => 
+                    [default] => 
+                    [length] => 11
+                    [key] => primary
+                )
+
+            [created] => Array
+                (
+                    [type] => datetime
+                    [null] => 
+                    [default] => 
+                    [length] => 
+                )
+
+            [description] => Array
+                (
+                    [type] => text
+                    [null] => 
+                    [default] => 
+                    [length] => 
+                    [collate] => utf8_general_ci
+                    [charset] => utf8
+                )
+
+            [user_id] => Array
+                (
+                    [type] => integer
+                    [null] => 1
+                    [default] => 
+                    [length] => 11
+                )
+
+        )
+
+    [validationErrors] => Array
+        (
+        )
+
+    [validationDomain] => 
+    [tablePrefix] => 
+    [plugin] => 
+    [name] => Bweet
+    [alias] => Bweet
+    [tableToModel] => Array
+        (
+            [bweets] => Bweet
+        )
+
+    [cacheQueries] => 
+    [hasOne] => Array
+        (
+        )
+
+    [hasMany] => Array
+        (
+        )
+
+    [hasAndBelongsToMany] => Array
+        (
+        )
+
+    [actsAs] => 
+    [Behaviors] => BehaviorCollection Object
+        (
+            [modelName] => Bweet
+            [_methods:protected] => Array
+                (
+                )
+
+            [_mappedMethods:protected] => Array
+                (
+                )
+
+            [_enabled:protected] => Array
+                (
+                )
+
+            [_loaded:protected] => Array
+                (
+                )
+
+            [defaultPriority] => 10
+        )
+
+    [whitelist] => Array
+        (
+        )
+
+    [cacheSources] => 1
+    [findQueryType] => 
+    [recursive] => 1
+    [order] => 
+    [virtualFields] => Array
+        (
+        )
+
+    [_associationKeys:protected] => Array
+        (
+            [belongsTo] => Array
+                (
+                    [0] => className
+                    [1] => foreignKey
+                    [2] => conditions
+                    [3] => fields
+                    [4] => order
+                    [5] => counterCache
+                )
+
+            [hasOne] => Array
+                (
+                    [0] => className
+                    [1] => foreignKey
+                    [2] => conditions
+                    [3] => fields
+                    [4] => order
+                    [5] => dependent
+                )
+
+            [hasMany] => Array
+                (
+                    [0] => className
+                    [1] => foreignKey
+                    [2] => conditions
+                    [3] => fields
+                    [4] => order
+                    [5] => limit
+                    [6] => offset
+                    [7] => dependent
+                    [8] => exclusive
+                    [9] => finderQuery
+                    [10] => counterQuery
+                )
+
+            [hasAndBelongsToMany] => Array
+                (
+                    [0] => className
+                    [1] => joinTable
+                    [2] => with
+                    [3] => foreignKey
+                    [4] => associationForeignKey
+                    [5] => conditions
+                    [6] => fields
+                    [7] => order
+                    [8] => limit
+                    [9] => offset
+                    [10] => unique
+                    [11] => finderQuery
+                )
+
+        )
+
+    [_associations:protected] => Array
+        (
+            [0] => belongsTo
+            [1] => hasOne
+            [2] => hasMany
+            [3] => hasAndBelongsToMany
+        )
+
+    [__backAssociation] => Array
+        (
+        )
+
+    [__backInnerAssociation] => Array
+        (
+        )
+
+    [__backOriginalAssociation] => Array
+        (
+        )
+
+    [__backContainableAssociation] => Array
+        (
+        )
+
+    [_insertID:protected] => 
+    [_sourceConfigured:protected] => 1
+    [findMethods] => Array
+        (
+            [all] => 1
+            [first] => 1
+            [count] => 1
+            [neighbors] => 1
+            [list] => 1
+            [threaded] => 1
+        )
+
+    [_eventManager:protected] => 
+    [_validator:protected] => 
+    [user_id] => 3
+)
+
+2014-03-20 18:58:48 Debug: Array
+(
+    [Bweet] => Array
+        (
+            [description] => aaaa
+        )
+
+)
+
+2014-03-20 18:59:52 Debug: Array
+(
+    [Bweet] => Array
+        (
+            [description] => bbbbb
+        )
+
+)
+
+2014-03-20 19:00:34 Debug: 
+2014-03-20 19:00:51 Debug: Array
+(
+    [description] => ccc
+)
+
+2014-03-20 19:01:32 Debug: Array
+(
+    [Bweet] => Array
+        (
+            [description] => dddddddddd
+            [user_id] => 3
+        )
+
+)
+
+2014-03-20 19:03:55 Debug: Array
+(
+    [Bweet] => Array
+        (
+            [description] => user test
+            [user_id] => 
+        )
+
+)
+
+2014-03-20 19:04:16 Debug: 
+2014-03-20 19:04:23 Debug: 
+2014-03-20 19:05:22 Debug: Array
+(
+    [id] => 23
+    [username] => piyo
+    [created] => 2014-03-19 19:55:51
+    [modified] => 2014-03-19 19:55:51
+)
+
+2014-03-20 19:08:14 Debug: 23
+2014-03-20 21:01:05 Debug: Array
+(
+    [User] => Array
+        (
+            [username] => aaaaaaaa
+            [password] => aaaaaaaaaa
+            [icon] => twi
+        )
+
+)
+
+2014-03-20 21:02:27 Debug: Array
+(
+)
+
+2014-03-20 21:02:56 Debug: Array
+(
+)
+
+2014-03-20 21:05:44 Debug: 
+2014-03-20 21:06:08 Debug: 
+2014-03-20 21:11:11 Debug: 
+2014-03-20 21:11:11 Debug: Array
+(
+    [User] => Array
+        (
+            [username] => aa
+            [password] => aa
+            [icon] => twi
+        )
+
+)
+
+2014-03-20 21:11:41 Debug: 
+2014-03-20 21:11:41 Debug: Array
+(
+    [User] => Array
+        (
+            [username] => bbb
+            [password] => bbbb
+            [icon] => twi
+        )
+
+)
+
+2014-03-20 21:12:45 Debug: 
+2014-03-20 21:12:45 Debug: Array
+(
+    [User] => Array
+        (
+            [username] => oooo
+            [password] => oooo
+            [icon] => Array
+                (
+                    [name] => twi
+                    [type] => application/octet-stream
+                    [tmp_name] => /tmp/php8Hm0gp
+                    [error] => 0
+                    [size] => 6707
+                )
+
+        )
+
+)
+
+2014-03-20 21:13:22 Debug: 
+2014-03-20 21:13:22 Debug: Array
+(
+    [User] => Array
+        (
+            [username] => oooo
+            [password] => oooo
+            [icon] => Array
+                (
+                    [name] => twi
+                    [type] => application/octet-stream
+                    [tmp_name] => /tmp/php9M03DG
+                    [error] => 0
+                    [size] => 6707
+                )
+
+        )
+
+)
+
+2014-03-20 21:13:29 Debug: 
+2014-03-20 21:13:29 Debug: Array
+(
+    [User] => Array
+        (
+            [username] => oooo
+            [password] => oooo
+            [icon] => Array
+                (
+                    [name] => twi
+                    [type] => application/octet-stream
+                    [tmp_name] => /tmp/php1EOCIC
+                    [error] => 0
+                    [size] => 6707
+                )
+
+        )
+
+)
+
+2014-03-20 21:13:46 Debug: 
+2014-03-20 21:13:46 Debug: Array
+(
+    [User] => Array
+        (
+            [username] => aaaaaaaaaaaaaaaaaaaaaa
+            [password] => aaaaaaaaaaaaaaaaaaaaaa
+            [icon] => Array
+                (
+                    [name] => twi
+                    [type] => application/octet-stream
+                    [tmp_name] => /tmp/phpgIUzFM
+                    [error] => 0
+                    [size] => 6707
+                )
+
+        )
+
+)
+
+2014-03-20 21:54:47 Debug: 
+2014-03-20 21:54:47 Debug: Array
+(
+    [User] => Array
+        (
+            [username] => aaaaaaaaaaaaaaaaaaaaaaaaa
+            [password] => aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+            [icon] => Array
+                (
+                    [name] => twi
+                    [type] => application/octet-stream
+                    [tmp_name] => /tmp/phpBi0Drr
+                    [error] => 0
+                    [size] => 6707
+                )
+
+        )
+
+)
+
+2014-03-20 21:54:57 Debug: Array
+(
+    [User] => Array
+        (
+            [username] => aaaaaaaaaaaaaaaaaaaaaaaaa
+            [password] => aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+            [icon] => Array
+                (
+                    [name] => twi
+                    [type] => application/octet-stream
+                    [tmp_name] => /tmp/phpz2uWLt
+                    [error] => 0
+                    [size] => 6707
+                )
+
+        )
+
+)
+
+2014-03-20 21:55:05 Debug: Array
+(
+    [User] => Array
+        (
+            [username] => aaaaaaaaaaaaaaaaaaaaaaaaa
+            [password] => aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+            [icon] => Array
+                (
+                    [name] => twi
+                    [type] => application/octet-stream
+                    [tmp_name] => /tmp/phpuL1JU3
+                    [error] => 0
+                    [size] => 6707
+                )
+
+        )
+
+)
+
+2014-03-20 21:55:30 Debug: Array
+(
+    [User] => Array
+        (
+            [username] => bbbbb
+            [password] => bbbbbb
+            [icon] => Array
+                (
+                    [name] => twi
+                    [type] => application/octet-stream
+                    [tmp_name] => /tmp/phpOVxToo
+                    [error] => 0
+                    [size] => 6707
+                )
+
+        )
+
+)
+
+2014-03-20 21:59:58 Debug: Array
+(
+    [User] => Array
+        (
+            [username] => bbbbb
+            [password] => bbbbbb
+            [icon] => Array
+                (
+                    [name] => twi
+                    [type] => application/octet-stream
+                    [tmp_name] => /tmp/phpUYvYAb
+                    [error] => 0
+                    [size] => 6707
+                )
+
+        )
+
+)
+

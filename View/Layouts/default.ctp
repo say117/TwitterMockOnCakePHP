@@ -23,8 +23,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 <head>
 	<?php echo $this->Html->charset(); ?>
 	<title>
-		<?php echo $cakeDescription ?>:
-		<?php echo $title_for_layout; ?>
+		Bwitter | <?php echo $title_for_layout; ?>
 	</title>
 	<?php
 		echo $this->Html->meta('icon');
@@ -35,11 +34,12 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		echo $this->fetch('css');
 		echo $this->fetch('script');
 	?>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 </head>
 <body>
 	<div id="container">
 		<div id="header">
-			<h1><?php echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1>
+			<h1>Bwitter</h1>
 		</div>
 		<div id="content">
 
@@ -57,5 +57,30 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		</div>
 	</div>
 	<?php echo $this->element('sql_dump'); ?>
+	<script type="text/javascript">
+	$(function() {
+		setTimeout(function() {
+			$('#flashMessage').fadeOut('slow');
+		}, 2000);
+	});
+  </script>
+	<script type="text/javascript">
+	$("#more-show").click(function(){
+	        var data = new Object();
+	        data = {"title":"hogehgoe"};
+	   $.ajax({
+	       url:"check.php",
+	       data:data,
+	       type:"post",
+	       dataType:"json",
+	       success:function(data){
+            alert(data);
+            alert("データが届いています。\nコンソールを開きながら再度確認して下さい。")
+            console.log(data);
+         }
+     });
+	});
+  </script>
+
 </body>
 </html>

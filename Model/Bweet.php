@@ -1,7 +1,14 @@
-create table bweets (
-    id int(11) unsigned NOT NULL auto_increment,
-    created datetime NOT NULL,
-    description text NOT NULL,
-    user_id int(11) unsigned,
-    PRIMARY KEY (`id`)
-) DEFAULT CHARSET=utf8
+<?php
+
+class Bweet extends AppModel {
+    public $belongsTo = 'User';
+    
+    public $validate = array(
+      'description' => array(
+          'required' => array(
+              'rule' => array('notEmpty'),
+              'message' => 'A description is required'
+          )
+      )
+    );
+}
