@@ -23,7 +23,7 @@ class BweetsController extends AppController {
         }
         //bweet格納
         $this->Bweet->create();
-        $bweetData = array('description' => Sanitize::clean($_POST['description'], array('encode' => false)),
+        $bweetData = array('description' => Sanitize::clean($this->request->data['description'], array('encode' => false)),
           'user_id' => $this->Auth->user()['id']);
         if ($this->Bweet->save($bweetData)) {
             $bweet = $this->set('bweet', $this->Bweet->find('first'));

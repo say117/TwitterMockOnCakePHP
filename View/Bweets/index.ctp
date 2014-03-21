@@ -8,11 +8,11 @@ if ($user) {
   echo $this->Html->link('Edit', '/users/edit') . "<br>";
   echo $this->Html->link('Sign out', '/users/logout') . "<br>";
 ?>
-<fieldset>
-  <legend>Bweet</legend>
-  <textarea id="bweet-description"></textarea><br>
-  <button type="submit" id="bweet-button">Bweet</button>
-</fieldset>
+<form id="bweet-form" method="POST">
+  <textarea id="bweet-description" class="required"></textarea><br>
+  <input type="submit" value="submit"/>
+</form>
+
 <?php
 } else {
   echo $this->Html->link('Sign up', '/users/add') . "<br>";
@@ -42,12 +42,15 @@ if ($user) {
 <input type="button" value="More Show 10 Bweets" id="more-show"/>
 </div>
 
-
+  <script src="./js/jquery.validate.min.js"></script>
   <script type="text/javascript">
   $(function() {
     setTimeout(function() {
       $('#flashMessage').fadeOut('slow');
     }, 2000);
+  });  
+  $(function() {
+     $("#bweet-form").validate({});
   });
   </script>
   <script type="text/javascript">
@@ -64,9 +67,13 @@ if ($user) {
          }
      });
   });
-  </script>
-  <script type="text/javascript">
-  $("#bweet-button").click(function(){
+
+  $("#bweet-form").submit(function(){
+    if (!$("#bweet-form").valid()) {
+        return false;
+    }
+     // HTMLでの送信をキャンセル
+     event.preventDefault();
      var data = {"description": $("#bweet-description").val()};
      $.ajax({
          url:"bweets/add",
